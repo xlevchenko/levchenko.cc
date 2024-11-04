@@ -41,6 +41,12 @@
         margin: 0 auto 2rem;
     }
 
+    .section__pic-container_about {
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+
     .about-containers {
         margin-top: 0;
     }
@@ -115,6 +121,11 @@
         height: 46vw;
         justify-content: center;
     }
+    .section__pic-container_about {
+        width: auto;
+        height: 46vw;
+        justify-content: center;
+    }
 
     .section__text__p2 {
         font-size: 1.25rem;
@@ -122,5 +133,17 @@
 
     .title {
         font-size: 2rem;
+    }
+
+
+    #projects {
+        font-family: Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

@@ -1,6 +1,18 @@
 function toggleMenu() {
-    const menu = document.querySelector(".menu-links")
-    const icon = document.querySelector(".hamburger-icon")
-    menu.classList.toggle("open")
-    icon.classList.toggle("open")
+    const menuLinks = document.querySelector('.menu-links');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+
+    menuLinks.classList.toggle('open');
+    hamburgerIcon.classList.toggle('open');
 }
+
+// Закрити меню при прокручуванні
+window.addEventListener('scroll', function () {
+    const menuLinks = document.querySelector('.menu-links');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    
+    if (window.scrollY > 0 && menuLinks.classList.contains('open')) {
+        menuLinks.classList.remove('open');
+        hamburgerIcon.classList.remove('open');
+    }
+});
