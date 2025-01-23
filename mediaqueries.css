@@ -89,7 +89,7 @@
     .details-container {
         width: 100%; /* Full width for each container */
         
-        border: 1px solid #ccc; /* Set uniform border */
+        /* border: 1px solid #ccc; Set uniform border */
         padding: 1rem;
         box-sizing: border-box;
     }
