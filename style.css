@@ -319,7 +319,6 @@ margin-top: 2rem;
     flex: 1;
     background: white;
     border-radius: 2rem;
-    /* border: rgb(53, 53, 53) 0.1rem solid; */
     border-color: rgb(163, 163, 163);
     text-align: center;
 
@@ -371,12 +370,6 @@ margin-top: 2rem;
     justify-content: space-around; 
     gap: 2.5rem; 
     text-align: left;
-
-    /* margin-bottom: 2.5rem; */
-    /* background-color: white;
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
 }
 
 article {
@@ -396,9 +389,124 @@ article .icon {
 }
 
 
+/* WORK EXPERIENCE */
+.work-experience {
+    position: relative;
+}
+
+.work-experience h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.job {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job:hover {
+    transform: translateY(-5px) !important;
+    transition: transform 0.3s ease !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.content h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: rgb(53, 53, 53);
+    margin-bottom: 0.5rem;
+}
+
+.company,
+.location {
+    font-size: 1rem;
+    color: rgb(130, 130, 130);
+    margin-bottom: 0.5rem;
+}
+
+.responsibilities {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: rgb(85, 85, 85);
+}
+
+.responsibilities li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.responsibilities li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(53, 53, 53);
+    font-size: 1.5rem;
+}
+
+.date {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+    margin-bottom: 1rem;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.timeline .date {
+    margin-bottom: 10px;
+}
+
+.timeline-marker {
+    width: 14px;
+    height: 14px;
+    background-color: white; 
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1; 
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    top: 100%;  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px; 
+    height: 150px;
+    background-color: black;
+}
+
+
 
 /* PROJECTS */
-
 #project {
     color: #333;
     display: flex;
@@ -466,8 +574,8 @@ article .icon {
 
 
 
-/* CONTACT */
 
+/* CONTACT */
 #contact {
     display: flex;
     justify-content: center;
@@ -504,7 +612,6 @@ height: 2rem;
 }
 
 /* FOOTER */
-
 footer {
     height: 26vh;
     margin: 0 1rem;
@@ -512,119 +619,4 @@ footer {
 
 footer p {
     text-align: center;
-}
-
-
-
-
-/* Work Experience Section */
-.work-experience {
-    position: relative;
-}
-
-.work-experience h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: rgb(53, 53, 53);
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-/* Job Listings */
-.job {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 2.5rem;
-    background-color: white;
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.job:hover {
-    transform: translateY(-5px) !important;
-    transition: transform 0.3s ease !important;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15) !important;
-}
-
-.content {
-    flex: 1;
-    padding-right: 2rem;
-}
-
-.content h3 {
-    font-size: 1.75rem;
-    font-weight: 500;
-    color: rgb(53, 53, 53);
-    margin-bottom: 0.5rem;
-}
-
-.company,
-.location {
-    font-size: 1rem;
-    color: rgb(130, 130, 130);
-    margin-bottom: 0.5rem;
-}
-
-.responsibilities {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: rgb(85, 85, 85);
-}
-
-.responsibilities li {
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.responsibilities li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgb(53, 53, 53);
-    font-size: 1.5rem;
-}
-
-.timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-}
-
-.date {
-    font-size: 1rem;
-    font-weight: 600;
-    color: rgb(53, 53, 53);
-    margin-bottom: 1rem;
-}
-
-@media screen and (max-width: 768px) {
-    .work-experience {
-        padding: 4vh 2rem;
-    }
-
-    .job {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .content {
-        padding-right: 0;
-        margin-bottom: 1.5rem;
-    }
-
-    .timeline {
-        margin-top: 1.5rem;
-        align-items: center;
-    }
 }
