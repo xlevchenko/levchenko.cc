@@ -257,6 +257,9 @@
         padding: 0 1rem;
         max-width: 100%;
     }
+     .app-screens img {
+    width: 145px;
+  }
 }
 
 @media screen and (max-width: 380px) {
