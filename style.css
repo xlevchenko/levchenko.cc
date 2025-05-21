@@ -212,11 +212,10 @@ a:hover {
 /* SECTION */
 
 section {
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
+    padding: 4rem 0;
+    margin: 0 24rem;
     box-sizing: border-box;
-    min-height: fit-content;
+    min-height: auto;
 }
 
 .section-container {
@@ -229,8 +228,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 80vh;
-
+    padding-top: 6rem;
 }
 
 .bold-text {
@@ -247,8 +245,8 @@ section {
 
 .section__pic-container {
     display: flex;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     margin: auto 0;
 }
 
@@ -303,6 +301,7 @@ section {
     font-weight: 300;
     font-style: normal;
     margin-bottom: 25px;
+    padding: 1rem 0;
 }
 
 .title {
@@ -371,6 +370,7 @@ section {
 
 #about {
     position: relative;
+    padding: 4rem 0;
 }
 
 .about-containers {
@@ -420,10 +420,7 @@ margin-top: 2rem;
 }
 
 .section__pic-container_about {
-    display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
+    display: none;
 }
 
 .custom-text {
@@ -435,6 +432,7 @@ margin-top: 2rem;
 
 #experience {
     position: relative;
+    padding: 4rem 0;
 }
 
 .experience-sub-title {
@@ -470,10 +468,155 @@ article .icon {
     cursor: default; 
 }
 
+/* PROJECTS SECTION - NEW DESIGN */
 #projects {
     position: relative;
+    padding: 4rem 0;
+    
+    margin: 0 auto;
 }
 
+.project {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 4rem;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project .header {
+    margin-bottom: 2rem;
+}
+
+.project .header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project .header p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-store-button {
+    margin: 1.5rem 0;
+}
+
+.app-store-button img {
+    width: 140px;
+    transition: opacity 0.2s ease;
+}
+
+.app-store-button img:hover {
+    opacity: 0.85;
+}
+
+.app-screens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.app-screens img {
+    width: 130px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.app-screens img:hover {
+    transform: scale(1.05);
+}
+
+.technologies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.technology-tag {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.technology-tag:hover {
+    background-color: #e8e8e8;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    #projects {
+        padding: 2rem 1.5rem;
+    }
+    
+    .project {
+        padding: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .project .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .app-screens {
+        gap: 1rem;
+    }
+    
+    .app-screens img {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #projects {
+        padding: 1.5rem 1rem;
+    }
+    
+    .project {
+        padding: 1.2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .project .header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .project .header p {
+        font-size: 0.9rem;
+    }
+    
+    .app-screens img {
+        width: 90px;
+    }
+    
+    .technology-tag {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
 
 /* WORK EXPERIENCE */
 .work-experience {
@@ -592,7 +735,6 @@ article .icon {
 
 
 
-/* PROJECTS */
 #project {
     color: #333;
     display: flex;
@@ -666,7 +808,7 @@ article .icon {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 70vh;
+    padding: 4rem 0;
 }
 
 .contact-info-upper-container {
