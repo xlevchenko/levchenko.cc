@@ -213,7 +213,7 @@ a:hover {
 
 section {
     padding: 4rem 0;
-    margin: 0 24rem;
+    margin: 0 15rem;
     box-sizing: border-box;
     min-height: auto;
 }
@@ -365,6 +365,15 @@ section {
     gap: 1rem;
 }
 
+.break-desktop {
+    display: inline;
+}
+
+@media (min-width: 1024px) {
+    .break-desktop {
+        display: block;
+    }
+}
 
 /* ABOUT SECTION */
 
@@ -853,3 +862,50 @@ footer {
 footer p {
     text-align: center;
 }
+
+/* Media queries for work experience section */
+@media screen and (max-width: 1200px) {
+    .work-experience {
+        margin: 0 2.4rem;
+    }
+    
+    .job {
+        padding: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .work-experience {
+        margin: 0 1.8rem;
+    }
+    
+    .job {
+        padding: 1.5rem;
+        flex-direction: column;
+    }
+    
+    .work-experience h2 {
+        font-size: 2rem;
+    }
+    
+    .timeline::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .work-experience {
+        margin: 0 1.2rem;
+    }
+    
+    .job {
+        padding: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .work-experience h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
