@@ -6,7 +6,6 @@ function toggleMenu() {
     hamburgerIcon.classList.toggle('open');
 }
 
-// Закрити меню при прокручуванні
 window.addEventListener('scroll', function () {
     const menuLinks = document.querySelector('.menu-links');
     const hamburgerIcon = document.querySelector('.hamburger-icon');

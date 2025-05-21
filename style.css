@@ -2,6 +2,56 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+
+@font-face {
+    font-family: 'Gilroy Light';
+    src: url('fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url('fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Extrabold';
+    src: url('fonts/Gilroy-Extrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Heavy';
+    src: url('fonts/Gilroy-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Medium';
+    src: url('fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Regular';
+    src: url('fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Semibold';
+    src: url('fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +59,7 @@
 
 body { 
     font-family: "Poppins", sans-serif;
+    /* font-family: 'Gilroy Regular', sans-serif; */
 }
 
 html {
@@ -172,7 +223,7 @@ section {
     display: flex;
 }
 
-/* PRIFILE SECTION */
+/* PROFILE SECTION */
 
 #profile {
     display: flex;
@@ -180,6 +231,18 @@ section {
     gap: 5rem;
     height: 80vh;
 
+}
+
+.bold-text {
+    font-family: 'Gilroy Bold', sans-serif;
+    font-weight: 900;
+    color: black;
+}
+
+.custom-text .bold-text {
+    font-weight: 700;
+    color: #000;
+    font-size: 1.05em;
 }
 
 .section__pic-container {
@@ -190,7 +253,7 @@ section {
 }
 
 .section__pic-container img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     object-fit: cover; 
 }
 
@@ -207,19 +270,50 @@ section {
     text-align: center;
 }
 
+.section__text__p1_hello {
+    font-size: 1.75rem;
+    
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Легкий стиль шрифту */
+.light-font {
+    font-family: 'Gilroy Light', sans-serif;
+    font-weight: 300;
+    color: #000;
+}
+
+/* Чорний стиль шрифту */
+.black-font {
+    font-family: 'Gilroy Bold', sans-serif;
+    font-weight: 900;
+    color: black;
+}
+
 .section__text__p2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
 }
 
+
+.title_main_profile {
+    font-size: 1.2rem;
+    text-align: left;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 25px;
+}
+
 .title {
-    font-size: 3rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
+
 #social-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-top: 1rem;
     gap: 1rem;
 }
@@ -236,7 +330,7 @@ section {
 
 .btn-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 1rem;
 }
 
@@ -246,16 +340,15 @@ section {
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    color: black;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-colar-1, 
 .btn-colar-2 {
     border: rgb(53,53,53) 0.1rem solid;
-}
-
-.btn-colar-1.btn, 
-.btn-colar-2:hover {
-    cursor: pointer;
 }
 
 .btn-colar-1, 
@@ -264,16 +357,9 @@ section {
     color: white;
 }
 
-.btn-colar-1:hover {
-    background: rgb(0, 0, 0);
-}
-
 .btn-colar-2 {
     background: none;
-}
-
-.btn-colar-2:hover {
-    border: rgb(255,255,255) 0.1rem solid;
+    color: black;
 }
 
 .btn-colar {
