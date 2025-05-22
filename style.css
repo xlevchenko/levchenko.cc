@@ -236,8 +236,11 @@ section {
 #profile {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5rem;
     padding-top: 6rem;
+    height: auto;
+    min-height: 80vh;
 }
 
 .bold-text {
