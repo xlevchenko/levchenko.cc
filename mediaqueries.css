@@ -1,3 +1,11 @@
+/* ≥1024px (десктопи) */
+@media (min-width: 1024px) {
+    .break-desktop {
+        display: block;
+    }
+}
+
+/* ≤1400px */
 @media screen and (max-width: 1400px) {
     #profile {
         height: 83vh;
@@ -8,6 +16,7 @@
     }
 }
 
+/* ≤1200px */
 @media screen and (max-width: 1200px) {
     #desktop-nav {
         display: none;
@@ -17,30 +26,30 @@
         display: flex;
     }
 
-    #experience, .experience-detail-container {
+    #experience,
+    .experience-detail-container {
         margin-top: 2rem;
     }
 
-    #profile, .section-container {
+    #profile,
+    .section-container {
         display: block;
     }
 
     .arrow {
         display: none;
     }
-    section, .section-container {
+
+    section,
+    .section-container {
         height: fit-content;
     }
 
     section {
         margin: 0 5%;
     }
-    .section__pic-container {
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
-    }
 
+    .section__pic-container,
     .section__pic-container_about {
         width: 275px;
         height: 275px;
@@ -50,8 +59,17 @@
     .about-containers {
         margin-top: 0;
     }
+
+    .work-experience {
+        margin: 0 2.4rem;
+    }
+
+    .job {
+        padding: 1.8rem;
+    }
 }
 
+/* ≤768px */
 @media screen and (max-width: 768px) {
     .job {
         flex-direction: column;
@@ -126,10 +144,45 @@
         align-items: center;
         width: 100%;
     }
+
+    #projects {
+        padding: 2rem 1.5rem;
+    }
+
+    .project {
+        padding: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .project .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .app-screens {
+        gap: 1rem;
+    }
+
+    .app-screens img {
+        width: 110px;
+    }
+
+    .work-experience {
+        margin: 0 1.8rem;
+    }
+
+    .job {
+        padding: 1.5rem;
+    }
+
+    .work-experience h2 {
+        font-size: 2rem;
+    }
 }
 
+/* ≤600px */
 @media screen and (max-width: 600px) {
-    #contact, footer {
+    #contact,
+    footer {
         height: 40vh;
     }
 
@@ -140,10 +193,7 @@
 
     article {
         font-size: 1rem;
-    }
-
-    article {
-        width: 100%; 
+        width: 100%;
         flex-direction: row;
     }
 
@@ -152,8 +202,10 @@
         margin-bottom: 2rem;
     }
 
-    .about-containers, .contact-info-upper-container, .btn-container {
-        flex-wrap: wrap; 
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+        flex-wrap: wrap;
     }
 
     .about-containers {
@@ -164,7 +216,6 @@
 
     .details-container {
         width: 100%;
-        
         padding: 1rem;
         box-sizing: border-box;
     }
@@ -173,7 +224,8 @@
         margin: 0;
     }
 
-    .contact-info-container p, .nav-links li a {
+    .contact-info-container p,
+    .nav-links li a {
         font-size: 1rem;
     }
 
@@ -191,11 +243,7 @@
         text-align: center;
     }
 
-    .section__pic-container {
-        width: auto;
-        height: 46vw;
-        justify-content: center;
-    }
+    .section__pic-container,
     .section__pic-container_about {
         width: auto;
         height: 46vw;
@@ -210,7 +258,8 @@
         font-size: 2rem;
     }
 
-    .timeline-marker, .timeline::after {
+    .timeline-marker,
+    .timeline::after {
         display: none;
     }
 
@@ -257,11 +306,55 @@
         padding: 0 1rem;
         max-width: 100%;
     }
-     .app-screens img {
-    width: 145px;
-  }
+
+    .app-screens img {
+        width: 145px;
+    }
 }
 
+/* ≤480px */
+@media screen and (max-width: 480px) {
+    #projects {
+        padding: 1.5rem 1rem;
+    }
+
+    .project {
+        padding: 1.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .project .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .project .header p {
+        font-size: 0.9rem;
+    }
+
+    .app-screens img {
+        width: 90px;
+    }
+
+    .technology-tag {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .work-experience {
+        margin: 0 1.2rem;
+    }
+
+    .job {
+        padding: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .work-experience h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ≤380px */
 @media screen and (max-width: 380px) {
     .btn-container {
         flex-direction: column;

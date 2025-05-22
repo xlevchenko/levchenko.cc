@@ -1,12 +1,34 @@
-/* General */
-
+/*===================================================
+  FONTS AND BASE STYLES
+====================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-
+/* Gilroy Font Family */
 @font-face {
     font-family: 'Gilroy Light';
     src: url('fonts/Gilroy-Light.ttf') format('truetype');
     font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Regular';
+    src: url('fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Medium';
+    src: url('fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Semibold';
+    src: url('fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -31,27 +53,7 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Gilroy Medium';
-    src: url('fonts/Gilroy-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gilroy Regular';
-    src: url('fonts/Gilroy-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gilroy Semibold';
-    src: url('fonts/Gilroy-Semibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -70,12 +72,16 @@ p {
     color: rgb(85, 85, 85);
 }
 
-/* Transition */
+/* Transitions */
 a, btn {
     transition: all 300ms ease;
 }
 
-/* Desktop nav */
+/*===================================================
+  NAVIGATION
+====================================================*/
+
+/* Desktop Navigation */
 nav, .nav-links {
     display: flex;
 }
@@ -92,6 +98,7 @@ height: 17vh;
     font-size: 1.5rem;
 }
 
+/* Link Styles */
 a {
     position: relative;
     color: black;
@@ -209,8 +216,9 @@ a:hover {
     visibility: visible;
 }
 
-/* SECTION */
-
+/*===================================================
+  SECTION COMMON STYLES
+====================================================*/
 section {
     padding: 4rem 0;
     margin: 0 15rem;
@@ -222,8 +230,9 @@ section {
     display: flex;
 }
 
-/* PROFILE SECTION */
-
+/*===================================================
+  PROFILE/HERO SECTION
+====================================================*/
 #profile {
     display: flex;
     justify-content: center;
@@ -294,7 +303,6 @@ section {
     margin-bottom: 1rem;
 }
 
-
 .title_main_profile {
     font-size: 1.2rem;
     text-align: left;
@@ -308,7 +316,6 @@ section {
     font-size: 1.5rem;
     text-align: center;
 }
-
 
 #social-container {
     display: flex;
@@ -369,14 +376,9 @@ section {
     display: inline;
 }
 
-@media (min-width: 1024px) {
-    .break-desktop {
-        display: block;
-    }
-}
-
-/* ABOUT SECTION */
-
+/*===================================================
+  ABOUT SECTION
+====================================================*/
 #about {
     position: relative;
     padding: 4rem 0;
@@ -437,8 +439,9 @@ margin-top: 2rem;
     text-align: left;
 }
 
-/* EXPERIENCE SECTION */
-
+/*===================================================
+  EXPERIENCE SECTION
+====================================================*/
 #experience {
     position: relative;
     padding: 4rem 0;
@@ -477,7 +480,9 @@ article .icon {
     cursor: default; 
 }
 
-/* PROJECTS SECTION - NEW DESIGN */
+/*===================================================
+  PROJECTS SECTION
+====================================================*/
 #projects {
     position: relative;
     padding: 4rem 0;
@@ -544,7 +549,6 @@ article .icon {
     width: 130px;
     height: auto;
     border-radius: 12px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     transition: transform 0.3s ease;
 }
 
@@ -579,60 +583,9 @@ article .icon {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
-    #projects {
-        padding: 2rem 1.5rem;
-    }
-    
-    .project {
-        padding: 1.5rem;
-        margin-bottom: 3rem;
-    }
-    
-    .project .header h1 {
-        font-size: 1.5rem;
-    }
-    
-    .app-screens {
-        gap: 1rem;
-    }
-    
-    .app-screens img {
-        width: 110px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #projects {
-        padding: 1.5rem 1rem;
-    }
-    
-    .project {
-        padding: 1.2rem;
-        margin-bottom: 2.5rem;
-    }
-    
-    .project .header h1 {
-        font-size: 1.3rem;
-    }
-    
-    .project .header p {
-        font-size: 0.9rem;
-    }
-    
-    .app-screens img {
-        width: 90px;
-    }
-    
-    .technology-tag {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
-
-/* WORK EXPERIENCE */
-
-
+/*===================================================
+  WORK EXPERIENCE SECTION
+====================================================*/
 .work-experience {
     position: relative;
 }
@@ -747,77 +700,9 @@ article .icon {
     background-color: black;
 }
 
-
-
-#project {
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-  
-  /* Header Section */
-  .header {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .header h1 {
-    font-size: 2rem;
-    margin: 0;
-    color: #000;
-  }
-  
-  .header p {
-    margin: 10px auto;
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .app-store-button {
-    margin: 20px 0;
-  }
-  
-  .app-store-button img {
-    width: 150px;
-  }
-  
-  /* App Screens Section */
-  .app-screens {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
-    flex-wrap: wrap;
-  }
-  
-  .app-screens img {
-    width: 185px;
-  }
-  
-  /* Technologies Section */
-  .technologies {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .technology-tag {
-    padding: 10px 15px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 20px;
-    font-size: 0.8rem;
-  }
-
-
-
-
-/* CONTACT */
+/*===================================================
+  CONTACT SECTION
+====================================================*/
 #contact {
     display: flex;
     justify-content: center;
@@ -853,7 +738,9 @@ cursor: default;
 height: 2rem;
 }
 
-/* FOOTER */
+/*===================================================
+  FOOTER
+====================================================*/
 footer {
     height: 26vh;
     margin: 0 1rem;
@@ -861,51 +748,6 @@ footer {
 
 footer p {
     text-align: center;
-}
-
-/* Media queries for work experience section */
-@media screen and (max-width: 1200px) {
-    .work-experience {
-        margin: 0 2.4rem;
-    }
-    
-    .job {
-        padding: 1.8rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .work-experience {
-        margin: 0 1.8rem;
-    }
-    
-    .job {
-        padding: 1.5rem;
-        flex-direction: column;
-    }
-    
-    .work-experience h2 {
-        font-size: 2rem;
-    }
-    
-    .timeline::after {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .work-experience {
-        margin: 0 1.2rem;
-    }
-    
-    .job {
-        padding: 1.2rem;
-        margin-bottom: 2rem;
-    }
-    
-    .work-experience h2 {
-        font-size: 1.8rem;
-    }
 }
 
 
