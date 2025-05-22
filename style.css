@@ -243,13 +243,29 @@ section {
 .bold-text {
     font-family: 'Gilroy Bold', sans-serif;
     font-weight: 900;
-    color: black;
+    color: rgb(21, 21, 21);
+}
+
+.profile-h1-text {
+    font-family: 'Gilroy Medium', sans-serif;
+    color: rgb(21, 21, 21);
+    font-weight: 400;
+}
+
+.ios-developer-highlight {
+    background-color: #212121;
+    color: #FFFFFF;
+    padding: 0px;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .custom-text .bold-text {
-    font-weight: 700;
-    color: #000;
-    font-size: 1.05em;
+    font-weight: 600;
 }
 
 .section__pic-container {
@@ -278,10 +294,19 @@ section {
 }
 
 .section__text__p1_hello {
-    font-size: 1.75rem;
-    
+    font-size: 1.55rem;
     line-height: 1.5;
     text-align: left;
+    font-family: 'Gilroy Black', sans-serif;
+    font-weight: 900;
+    color: rgb(21, 21, 21);
+}
+
+/* Uniform font styles for greeting */
+.greeting-text {
+    font-family: 'Gilroy Black', sans-serif;
+    font-weight: 900;
+    color: rgb(21, 21, 21);
 }
 
 /* Легкий стиль шрифту */
@@ -354,12 +379,12 @@ section {
 
 .btn-colar-1, 
 .btn-colar-2 {
-    border: rgb(53,53,53) 0.1rem solid;
+    border: rgb(53,53,21) 0.1rem solid;
 }
 
 .btn-colar-1, 
 .btn-colar-2:hover {
-    background: rgb(53,53,53);
+    background: rgb(21,21,21);
     color: white;
 }
 
