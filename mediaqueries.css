@@ -147,6 +147,15 @@
         max-width: 90%;
         gap: 1.5rem;
     }
+    .about-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .about-text,
+    .skills-container {
+        max-width: 100%;
+    }
 }
 
 /* ≤768px */
@@ -374,18 +383,24 @@
     width: 1.8rem;
     height: 1.8rem;
   }
+
+  .skill-item {
+    padding: 0.8rem;
+}
+
+.skills-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
 }
 
 /* ≤600px */
 @media screen and (max-width: 600px) {
     #profile {
-        height: auto;
-        min-height: auto;
-        margin: 0;
-        padding: 0.5rem;
-        width: 100%;
-        box-sizing: border-box;
-    }
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
 
     .section__pic-container {
         width: 180px;
