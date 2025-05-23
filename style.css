@@ -738,20 +738,44 @@ article .icon {
 
 /* Media queries for projects section */
 @media screen and (max-width: 1200px) {
+    #projects {
+        margin: 0 2rem;
+    }
+
     .project-content {
         flex-direction: column;
         gap: 2rem;
+        align-items: center;
     }
 
     .project-info,
     .project-media {
         max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-info h1 {
+        text-align: center;
+    }
+
+    .project-info p {
+        text-align: center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .technologies {
+        justify-content: center;
     }
 
     .app-screens {
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
         justify-items: center;
+        max-width: 800px;
+        margin: 0 auto 1.5rem;
     }
 
     .app-screens img {
@@ -760,19 +784,55 @@ article .icon {
 }
 
 @media screen and (max-width: 768px) {
+    #projects {
+        margin: 0 1.5rem;
+    }
+
+    .project {
+        padding: 1.5rem;
+    }
+
     .app-screens {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
+        gap: 1rem;
+        max-width: 400px;
     }
 
     .app-screens img {
         max-width: 140px;
     }
+
+    .project-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-info p {
+        font-size: 0.9rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
+    #projects {
+        margin: 0 1rem;
+    }
+
+    .project {
+        padding: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .app-screens {
+        gap: 0.8rem;
+        max-width: 300px;
+    }
+
     .app-screens img {
         max-width: 120px;
+    }
+
+    .technology-tag {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
     }
 }
 
