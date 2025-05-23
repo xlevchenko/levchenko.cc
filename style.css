@@ -133,10 +133,32 @@ height: 17vh;
 }
 
 .logo {
-    font-size: 2rem;
-}
-.logo:hover {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Gilroy Bold', sans-serif;
+    position: relative;
     cursor: default;
+    transition: all 0.3s ease;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #D5451B;
+    transition: width 0.3s ease;
+}
+
+.logo:hover {
+    color: #D5451B;
+}
+
+.logo:hover::after {
+    width: 100%;
 }
 
 /* Hamburger Menu */
