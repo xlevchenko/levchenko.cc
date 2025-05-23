@@ -170,6 +170,7 @@ nav {
 .hamburger-menu {
     position: relative;
     display: inline-block;
+    z-index: 1000;
 }
 
 .hamburger-icon {
@@ -180,7 +181,7 @@ nav {
     width: 30px;
     cursor: pointer;
     position: relative;
-    z-index: 100;
+    z-index: 1000;
     transition: all 0.3s ease-in-out;
 }
 
@@ -212,7 +213,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #FDFAF6;
     display: flex;
     flex-direction: column;
@@ -221,6 +222,7 @@ nav {
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease-in-out;
+    z-index: 999;
 }
 
 .menu-links.open {
@@ -302,6 +304,8 @@ section {
     padding-top: 6rem;
     height: auto;
     min-height: 80vh;
+    position: relative;
+    z-index: 1;
 }
 
 .bold-text {
