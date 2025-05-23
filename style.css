@@ -943,4 +943,20 @@ footer p {
     text-align: center;
 }
 
+#projects .section__text__p1 {
+    font-size: 1.2rem;
+    color: #D5451B;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#projects .title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+    font-weight: 700;
+}
+
 
