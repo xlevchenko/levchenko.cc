@@ -234,6 +234,28 @@
   #about .section__text__p1 {
     font-size: 1.1rem;
   }
+
+  .skill-item {
+    padding: 0.56rem 0.72rem;  /* 0.7 * 0.8 and 0.9 * 0.8 */
+  }
+
+  .skill-item .icon {
+    width: 0.96rem;  /* 1.2 * 0.8 */
+    height: 0.96rem;
+  }
+
+  .skill-item h4 {
+    font-size: 0.76rem;  /* 0.95 * 0.8 */
+  }
+
+  .skills-grid {
+    gap: 0.64rem;  /* 0.8 * 0.8 */
+  }
+
+  .skills-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* ≤600px */
