@@ -68,6 +68,20 @@
     .job {
         padding: 1.8rem;
     }
+
+    .section__pic-container_about {
+        width: 350px;
+        height: 350px;
+        margin: 0 auto 3rem;
+    }
+
+    .about-details-container {
+        padding: 2.5rem;
+    }
+
+    #about .title {
+        font-size: 2.2rem;
+    }
 }
 
 /* ≤768px */
@@ -195,6 +209,30 @@
   .ios-developer-highlight {
     font-weight: 700;
     font-size: 1.2rem;
+  }
+
+  .section__pic-container_about {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .about-details-container {
+    padding: 2rem;
+  }
+
+  .custom-text {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  #about .title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  #about .section__text__p1 {
+    font-size: 1.1rem;
   }
 }
 
@@ -371,6 +409,32 @@
 
     .work-experience h2 {
         font-size: 1.8rem;
+    }
+
+    .section__pic-container_about {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto 2rem;
+    }
+
+    .about-details-container {
+        padding: 1.5rem;
+    }
+
+    .custom-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+
+    #about .title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    #about .section__text__p1 {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
     }
 }
 
