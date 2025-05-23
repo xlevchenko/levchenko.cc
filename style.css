@@ -652,28 +652,58 @@ article .icon {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.project .header {
-    margin-bottom: 2rem;
+.project-content {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
 }
 
-.project .header h1 {
+.project-info {
+    flex: 1;
+    max-width: 45%;
+}
+
+.project-info h1 {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    color: #333;
 }
 
-.project .header p {
+.project-info p {
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.project-media {
+    flex: 1;
+    max-width: 55%;
+}
+
+.app-screens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.app-screens img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.app-screens img:hover {
+    transform: scale(1.1);
+    z-index: 1;
 }
 
 .app-store-button {
-    margin: 1.5rem 0;
+    text-align: center;
 }
 
 .app-store-button img {
@@ -685,28 +715,8 @@ article .icon {
     opacity: 0.85;
 }
 
-.app-screens {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.app-screens img {
-    width: 130px;
-    height: auto;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.app-screens img:hover {
-    transform: scale(1.05);
-}
-
 .technologies {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 0.8rem;
     margin-top: 2rem;
@@ -726,9 +736,44 @@ article .icon {
     background-color: #e8e8e8;
 }
 
-/* Hide navigation arrow in projects */
-#projects .arrow {
-    display: none;
+/* Media queries for projects section */
+@media screen and (max-width: 1200px) {
+    .project-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .project-info,
+    .project-media {
+        max-width: 100%;
+    }
+
+    .app-screens {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-items: center;
+    }
+
+    .app-screens img {
+        max-width: 110px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .app-screens {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .app-screens img {
+        max-width: 140px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .app-screens img {
+        max-width: 120px;
+    }
 }
 
 /*===================================================
