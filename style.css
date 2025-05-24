@@ -448,11 +448,14 @@ section {
 }
 
 /* ICONS */
-
 .icon {
     cursor: pointer;
     height: 3rem;
-   
+    transition: transform 0.3s ease;
+}
+
+#social-container .icon:hover {
+    transform: scale(1.2);
 }
 
 /* BUTTONS */
@@ -633,9 +636,9 @@ section {
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    background: #fff;
-    padding: 0.7rem 0.9rem;
-    border-radius: 0.7rem;
+    background: #D5451B;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.8rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: auto;
@@ -643,7 +646,7 @@ section {
 
 .skill-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(213, 69, 27, 0.3);
 }
 
 .skill-item .icon {
@@ -652,8 +655,8 @@ section {
 }
 
 .skill-item h4 {
-    font-size: 0.95rem;
-    color: #333;
+    font-size: 0.85rem;
+    color: #ffffff;
     margin: 0;
     font-weight: 600;
 }
