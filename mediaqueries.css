@@ -156,6 +156,50 @@
     .skills-container {
         max-width: 100%;
     }
+
+    #projects {
+        margin: 0 2rem;
+    }
+
+    .project-content {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .project-info,
+    .project-media {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-info h1 {
+        text-align: center;
+    }
+
+    .project-info p {
+        text-align: center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .technologies {
+        justify-content: center;
+    }
+
+    .app-screens {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-items: center;
+        max-width: 800px;
+        margin: 0 auto 1.5rem;
+    }
+
+    .app-screens img {
+        max-width: 110px;
+    }
 }
 
 /* ≤768px */
@@ -246,7 +290,7 @@
     }
 
     #projects {
-        padding: 2rem 1.5rem;
+        margin: 0 1.5rem;
     }
 
     .project {
@@ -259,11 +303,13 @@
     }
 
     .app-screens {
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        max-width: 400px;
     }
 
     .app-screens img {
-        width: 110px;
+        max-width: 140px;
     }
 
     .work-experience {
@@ -392,6 +438,48 @@
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
 }
+
+    .project-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-info p {
+        font-size: 0.9rem;
+    }
+
+    .section__text__p1_hello {
+        font-size: 1.6rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.2;
+    }
+
+    .ios-developer-highlight {
+        font-size: 2.8rem;
+        margin: 0.3rem 0;
+        display: block;
+        text-align: center;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+    }
+
+    .profile-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0 1rem;
+        color: #555;
+        font-family: 'Gilroy Regular', sans-serif;
+        max-width: 600px;
+        margin: 0.8rem auto;
+    }
+
+    .title_main_profile {
+        text-align: center;
+    }
+
+    .btn-container {
+        margin-top: 1.2rem;
+    }
 }
 
 /* ≤600px */
@@ -575,12 +663,12 @@
 /* ≤480px */
 @media screen and (max-width: 480px) {
     #projects {
-        padding: 1.5rem 1rem;
+        margin: 0 1rem;
     }
 
     .project {
         padding: 1.2rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
     }
 
     .project .header h1 {
@@ -591,8 +679,13 @@
         font-size: 0.9rem;
     }
 
+    .app-screens {
+        gap: 0.8rem;
+        max-width: 300px;
+    }
+
     .app-screens img {
-        width: 90px;
+        max-width: 120px;
     }
 
     .technology-tag {
@@ -682,6 +775,30 @@
         height: 1.6rem;
         flex-shrink: 0;
     }
+
+    .section__text__p1_hello {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .ios-developer-highlight {
+        font-size: 2.5rem;
+        margin: 0.2rem 0;
+        line-height: 1.1;
+        margin-bottom: 0.4rem;
+    }
+
+    .profile-description {
+        font-size: 1rem;
+        line-height: 1.3;
+        padding: 0 1.2rem;
+        margin: 0.2rem auto 0;
+        max-width: 400px;
+    }
+
+    .btn-container {
+        margin-top: 1rem;
+    }
 }
 
 /* ≤380px */
@@ -759,6 +876,32 @@
         width: 1.4rem;
         height: 1.4rem;
     }
+
+    .section__text__p1_hello {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .ios-developer-highlight {
+        font-size: 2.2rem;
+        line-height: 1.1;
+        margin-bottom: 0.3rem;
+    }
+
+    .profile-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0 1rem;
+        color: #555;
+        font-family: 'Gilroy Regular', sans-serif;
+        max-width: 600px;
+        margin: 0.8rem auto;
+    }
+
+    .btn-container {
+        margin-top: 0.8rem;
+    }
 }
 
 /* Prevent horizontal scroll */
@@ -772,4 +915,25 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-all;
+}
+
+/* Optimize vertical spacing for mobile */
+@media screen and (max-height: 700px) {
+    #profile {
+        padding: 0.5rem;
+    }
+
+    .section__pic-container {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0.6rem;
+    }
+
+    .ios-developer-highlight {
+        margin: 0.15rem 0;
+    }
+
+    .btn-container {
+        margin-top: 0.6rem;
+    }
 }
