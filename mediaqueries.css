@@ -3,6 +3,23 @@
     .break-desktop {
         display: block;
     }
+
+    .skill-item {
+        padding: 0.45rem 0.75rem;
+    }
+
+    .skill-item .icon {
+        width: 0.95rem;
+        height: 0.95rem;
+    }
+
+    .skill-item h4 {
+        font-size: 0.82rem;
+    }
+
+    .skills-grid {
+        gap: 0.55rem;
+    }
 }
 
 /* ≤1400px */
@@ -14,6 +31,23 @@
     }
     .about-containers {
         flex-wrap: wrap;
+    }
+
+    .skill-item {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .skill-item .icon {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .skill-item h4 {
+        font-size: 0.85rem;
+    }
+
+    .skills-grid {
+        gap: 0.6rem;
     }
 }
 
@@ -199,6 +233,23 @@
 
     .app-screens img {
         max-width: 110px;
+    }
+
+    .skill-item {
+        padding: 0.4rem 0.7rem;
+    }
+
+    .skill-item .icon {
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+
+    .skill-item h4 {
+        font-size: 0.8rem;
+    }
+
+    .skills-grid {
+        gap: 0.5rem;
     }
 }
 
@@ -935,5 +986,25 @@ body {
 
     .btn-container {
         margin-top: 0.6rem;
+    }
+}
+
+/* ≥1400px */
+@media screen and (min-width: 1400px) {
+    .skill-item {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .skill-item .icon {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .skill-item h4 {
+        font-size: 0.85rem;
+    }
+
+    .skills-grid {
+        gap: 0.6rem;
     }
 }
