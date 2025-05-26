@@ -1,0 +1,17 @@
+# Enable access to favicon files
+<FilesMatch "\.(ico|png|svg)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Set correct MIME types
+AddType image/x-icon .ico
+AddType image/svg+xml .svg
+AddType image/png .png
+
+# Enable CORS for favicon files
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|png|svg)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule> 
