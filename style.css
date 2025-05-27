@@ -871,7 +871,6 @@ section {
     backdrop-filter: blur(3px);
 }
 
-.project-content h3:hover + p + .project-gallery .gallery-overlay,
 .project-gallery:hover .gallery-overlay {
     opacity: 1;
     pointer-events: auto;

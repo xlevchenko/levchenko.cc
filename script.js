@@ -34,12 +34,28 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.1
     };
 
+    let isScrolling = false;
+    let scrollTimeout;
+
+    // Add scroll event listener to detect fast scrolling
+    window.addEventListener('scroll', function() {
+        isScrolling = true;
+        clearTimeout(scrollTimeout);
+        
+        // Reset isScrolling after scrolling stops
+        scrollTimeout = setTimeout(function() {
+            isScrolling = false;
+        }, 150);
+    });
+
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // If we're scrolling quickly, apply animations immediately without delays
+                if (isScrolling) {
+                    entry.target.style.transitionDelay = '0s';
+                }
                 entry.target.classList.add('visible');
-                // Optional: Unobserve after animation
-                // observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -58,7 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const skillItems = section.querySelectorAll('.skill-item');
             skillItems.forEach((item, index) => {
                 item.classList.add('scale-in');
-                item.style.transitionDelay = `${index * 0.05}s`;
+                // Only apply delay if not scrolling quickly
+                if (!isScrolling) {
+                    item.style.transitionDelay = `${index * 0.05}s`;
+                }
             });
         }
         // Projects section
@@ -66,7 +85,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const projectCards = section.querySelectorAll('.project-card');
             projectCards.forEach((card, index) => {
                 card.classList.add('fade-in');
-                card.style.transitionDelay = `${index * 0.2}s`;
+                // Only apply delay if not scrolling quickly
+                if (!isScrolling) {
+                    card.style.transitionDelay = `${index * 0.2}s`;
+                }
             });
         }
         // Contact section
@@ -74,7 +96,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const contactContainers = section.querySelectorAll('.contact-info-container');
             contactContainers.forEach((container, index) => {
                 container.classList.add('slide-in-left');
-                container.style.transitionDelay = `${index * 0.2}s`;
+                // Only apply delay if not scrolling quickly
+                if (!isScrolling) {
+                    container.style.transitionDelay = `${index * 0.2}s`;
+                }
             });
         }
     });
