@@ -1,4 +1,4 @@
-# levchenko.dev
+# levchenko.cc
 
 Personal portfolio website for Oleksii Levchenko — iOS Developer.
 
