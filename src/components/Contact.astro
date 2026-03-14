@@ -1,0 +1,139 @@
+---
+const contactItems = [
+  {
+    href: 'mailto:second.levchenko@gmail.com',
+    label: 'Send an email',
+    icon: '/assets/email.png',
+    iconAlt: 'Email',
+    text: 'second.levchenko@gmail.com',
+    external: false,
+  },
+  {
+    href: 'https://www.linkedin.com/in/oleksii-levchenko-512781212/',
+    label: 'View LinkedIn profile',
+    icon: '/assets/linkedin.png',
+    iconAlt: 'LinkedIn',
+    text: 'LinkedIn',
+    external: true,
+  },
+];
+---
+
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="contact-inner container">
+    <span class="section-label">Get in Touch</span>
+    <h2 id="contact-heading" class="section-title">Contact Me</h2>
+
+    <ul class="contact-list reveal-group" role="list">
+      {
+        contactItems.map(({ href, label, icon, iconAlt, text, external }) => (
+          <li>
+            <a
+              href={href}
+              class="contact-card"
+              aria-label={label}
+              {...(external
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
+            >
+              <img
+                src={icon}
+                alt={iconAlt}
+                width="32"
+                height="32"
+                class="contact-icon"
+                aria-hidden="true"
+              />
+              <span class="contact-text">{text}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  #contact {
+    padding-block: var(--space-3xl);
+  }
+
+  .contact-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-inner .section-title {
+    margin-bottom: var(--space-xl);
+  }
+
+  .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-surface);
+    padding: 1.25rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), color var(--transition-base);
+    color: var(--color-text-primary);
+    min-width: 240px;
+  }
+
+  .contact-card:hover,
+  .contact-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    color: var(--color-accent);
+  }
+
+  .contact-icon {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+  }
+
+  .contact-card:hover .contact-icon {
+    transform: scale(1.1);
+  }
+
+  .contact-text {
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    font-weight: 500;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    min-width: 0;
+  }
+
+  @media (max-width: 600px) {
+    .contact-list {
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 420px;
+    }
+
+    .contact-card {
+      min-width: unset;
+      width: 100%;
+      padding: 1.1rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .contact-card {
+      padding: 1rem 1.25rem;
+    }
+  }
+</style>

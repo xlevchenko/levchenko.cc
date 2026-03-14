@@ -1,0 +1,52 @@
+---
+import { projects } from '@/data/projects';
+import ProjectCard from './ProjectCard.astro';
+---
+
+<section id="projects" aria-labelledby="projects-heading">
+  <div class="projects-inner container">
+    <span class="section-label">Featured Work</span>
+    <h2 id="projects-heading" class="section-title">My Projects</h2>
+
+    <div class="projects-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </div>
+</section>
+
+<style>
+  #projects {
+    padding-block: var(--space-3xl);
+    background-color: var(--color-bg);
+  }
+
+  .projects-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-inner .section-title {
+    margin-bottom: var(--space-xl);
+  }
+
+  .projects-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+      max-width: 680px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #projects {
+      padding-block: var(--space-2xl);
+    }
+  }
+</style>

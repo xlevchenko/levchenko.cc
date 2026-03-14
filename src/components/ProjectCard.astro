@@ -1,0 +1,177 @@
+---
+import type { Project } from '@/data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const { title, description, appStoreUrl, screens } = project;
+
+// Show first 3 screens on desktop, all 4 on mobile (via CSS)
+---
+
+<article class="project-card reveal" aria-label={`Project: ${title}`}>
+  <div class="project-body">
+    <h3 class="project-title">{title}</h3>
+    <p class="project-desc">{description}</p>
+
+    <div class="project-gallery" role="group" aria-label={`${title} screenshots`}>
+      {
+        screens.map((screen, i) => (
+          <img
+            src={screen.src}
+            alt={screen.alt}
+            width="200"
+            height="433"
+            loading="lazy"
+            class:list={['gallery-img', { 'gallery-img--fourth': i === 3 }]}
+          />
+        ))
+      }
+
+      <div class="gallery-overlay" aria-hidden="true">
+        <a
+          href={appStoreUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="view-btn"
+          aria-label={`View ${title} on the App Store`}
+          tabindex="-1"
+        >
+          View on App Store
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  .project-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+  }
+
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .project-body {
+    padding: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .project-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.75rem;
+    transition: color var(--transition-base);
+  }
+
+  .project-card:hover .project-title {
+    color: var(--color-accent);
+  }
+
+  .project-desc {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── Gallery ── */
+  .project-gallery {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f9f7f4;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .gallery-img {
+    width: 100%;
+    aspect-ratio: 9 / 19.5;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform var(--transition-base);
+  }
+
+  /* 4th screen hidden by default, shown on narrow viewports */
+  .gallery-img--fourth {
+    display: none;
+  }
+
+  /* ── Hover overlay ── */
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(213, 69, 27, 0.88);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    border-radius: var(--radius-md);
+  }
+
+  .project-gallery:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .view-btn {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-display-semibold);
+    padding: 0.75rem 1.75rem;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius-full);
+    transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+    white-space: nowrap;
+  }
+
+  .view-btn:hover,
+  .view-btn:focus-visible {
+    background-color: #fff;
+    color: var(--color-accent);
+    border-color: #fff;
+  }
+
+  /* Make overlay link tabbable when visible */
+  .project-gallery:hover .view-btn,
+  .project-gallery:focus-within .view-btn {
+    tabindex: 0;
+  }
+
+  .project-gallery:focus-within .gallery-overlay {
+    opacity: 1;
+  }
+
+  /* ── Narrow viewports: 2-col grid, show 4th image ── */
+  @media (max-width: 680px) {
+    .project-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-img--fourth {
+      display: block;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .project-gallery {
+      gap: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+</style>

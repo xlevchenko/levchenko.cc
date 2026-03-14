@@ -1,0 +1,206 @@
+---
+import { skills } from '@/data/skills';
+---
+
+<section id="about" aria-labelledby="about-heading">
+  <div class="about-inner container">
+    <span class="section-label">Get To Know More</span>
+    <h2 id="about-heading" class="section-title">About Me</h2>
+
+    <div class="about-card reveal">
+      <div class="about-content">
+        <!-- Bio text -->
+        <div class="about-text">
+          <p>
+            Hi! I'm an iOS Developer with over <strong>4+ years of experience</strong> in mobile
+            app development. I have experience creating and publishing over <strong
+              >20+ apps on the App Store</strong
+            >.
+          </p>
+          <p>
+            My expertise spans the full development cycle — from concept to release, with a focus
+            on creating intuitive user interfaces and optimizing performance. I work with UIKit,
+            SwiftUI, and integrate third-party services to enhance app functionality.
+          </p>
+          <p>
+            I'm always looking to improve my skills and work on projects that align with both user
+            needs and business goals.
+          </p>
+        </div>
+
+        <!-- Skills -->
+        <aside class="skills-panel" aria-label="Technical skills">
+          <h3 class="skills-heading">Technical Skills</h3>
+          <ul class="skills-grid reveal-group" role="list" aria-label="List of technical skills">
+            {
+              skills.map((skill) => (
+                <li class="skill-chip">
+                  <img
+                    src="/assets/checkmark.png"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                    class="skill-icon"
+                  />
+                  <span>{skill}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #about {
+    padding-block: var(--space-3xl);
+  }
+
+  .about-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-inner .section-title {
+    margin-bottom: var(--space-xl);
+  }
+
+  /* ── Card ── */
+  .about-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  /* ── Bio text ── */
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .about-text p {
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+  }
+
+  .about-text strong {
+    font-weight: 700;
+    color: var(--color-accent);
+    position: relative;
+  }
+
+  /* ── Skills panel ── */
+  .skills-panel {
+    min-width: 0;
+  }
+
+  .skills-heading {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── Skills grid ── */
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .skill-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 0.5rem 0.9rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), background var(--transition-base);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-chip::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(213, 69, 27, 0.04);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+  }
+
+  .skill-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(213, 69, 27, 0.1);
+    border-color: rgba(213, 69, 27, 0.25);
+  }
+
+  .skill-chip:hover::before {
+    opacity: 1;
+  }
+
+  .skill-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+    object-fit: contain;
+    opacity: 0.7;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .skill-chip span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-card {
+      border-radius: var(--radius-lg);
+    }
+
+    .skill-chip {
+      padding: 0.4rem 0.75rem;
+    }
+
+    .skill-chip span {
+      font-size: 0.82rem;
+    }
+  }
+</style>
